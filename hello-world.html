@@ -63,6 +63,22 @@
         animation: rise 900ms cubic-bezier(.2,.8,.2,1) both;
       }
 
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 0.55rem;
+        margin-bottom: 3.25rem;
+      }
+
+      nav a {
+        padding: 0.55rem 0.9rem;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: none;
+      }
+
+      nav a[aria-current="page"], nav a:hover { color: #131324; background: linear-gradient(100deg, var(--cyan), #d7c8ff); }
+
       .eyebrow {
         display: inline-flex;
         gap: 0.5rem;
@@ -126,6 +142,11 @@
   </head>
   <body>
     <main>
+      <nav aria-label="Primary navigation">
+        <a href="hello-world.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <div class="eyebrow">A friendly beginning</div>
       <h1>Hello, World!</h1>
       <p>Your next great idea has a home. This small page is styled, responsive, and ready for you to make it your own.</p>
